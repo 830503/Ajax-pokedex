@@ -6,7 +6,7 @@
 getAPI();*/
 
 //DOM objects
-document.getElementById("run").addEventListener("click", function(){
+
 
 
 const pokeName = document.querySelector(".poke-name");
@@ -35,8 +35,6 @@ fetch('https://pokeapi.co/api/v2/pokemon/2')
         //left-container-main-screen
         pokeName.innerHTML = data["name"];
         pokeId.innerHTML = data["id"];
-        pokeFrontImage.innerHTML = data[""];
-        console.log(data);
         pokeFrontImage.src = data["sprites"]["front_default"] || " ";
         pokeBackImage.src = data["sprites"]["back_default"] || " ";
        
@@ -76,9 +74,8 @@ fetch('https://pokeapi.co/api/v2/pokemon/2')
             move4.innerText = fourthMove["move"]["name"];
         }
         
-
-       
-        
         
     })
+ document.getElementById("run").addEventListener("click", function(){
+
 })
