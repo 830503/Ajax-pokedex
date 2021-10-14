@@ -155,7 +155,7 @@ body {
 
 .left-container_bottom-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -181,7 +181,7 @@ body {
     width: 50px;
 }
 
-.left-container_hinge{
+.left-container_hinge {
     background: linear-gradient(to right, rgb(56, 39, 39), red, red, rgb(56, 39, 39));
     height: 75px;
     width: 100%;
