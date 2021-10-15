@@ -18,6 +18,7 @@
     const evolution2 = document.getElementById("ev2");
     const evolution3 = document.getElementById("ev3");
     var id = 1;
+    
 
     const capitalize = (str) => str[0].toUpperCase() + str.substr(1);
 
@@ -75,33 +76,33 @@ pokemon();
     
 searchButton.addEventListener("click", function(){
     id = searchBar.value;
-
     pokemon();
-    
 });
 
+searchBar.addEventListener("keypress", function(event){
+    if(event.key === "Enter"){
+        id = searchBar.value;
+    }
+    pokemon();
+});
 
 prevButton.addEventListener("click", function(){
-    id -= 1;
+    id--;
     if (id < 1){
         id = 898;
     }
     pokemon();
-    
 });
 
 nextButton.addEventListener("click", function(){
-    id += 1;
+    id++;
     if (id > 898){
         id = 1;
     }
     pokemon();
-    
 });
 
 
-        
-        
         
    /* async function getEvoChain(){
             let chainApi = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`);
